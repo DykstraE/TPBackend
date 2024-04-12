@@ -6,7 +6,9 @@ export class Estudiante extends Persona {
         this.cursoMatriculado = cursoMatriculado;
     }
 
-    cambiarCurso(nuevoCurso) {
-        this.cursoMatriculado = nuevoCurso;
+    cambiarCursoMatriculado(idPersona, nuevocursoMatriculado) {
+        if (this.id === idPersona) {
+            this.cursoMatriculado = nuevocursoMatriculado;
+        }
     }
 }

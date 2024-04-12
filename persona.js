@@ -10,7 +10,9 @@ export class Persona {
         this.cargo = cargo
     }
 
-    cambiarEstadoCivil(nuevoEstadoCivil) {
-        this.estadoCivil = nuevoEstadoCivil;
+    cambiarEstadoCivil(idPersona, nuevoEstadoCivil) {
+        if (this.id === idPersona) {
+            this.estadoCivil = nuevoEstadoCivil;
+        }
     }
 }

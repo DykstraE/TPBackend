@@ -25,7 +25,7 @@ export class CentroEducativo {
         this.mostrarInfo();
     }
 
-    mostrarInfo() {
+    mostrarInfo(personasArray) {
 
         let searchTerm = document.getElementById('searchInput').value.toLowerCase();
 
@@ -42,16 +42,16 @@ export class CentroEducativo {
 
             let atributosEspecificos = '';
             if (persona instanceof Estudiante) {
-                atributosEspecificos += `Curso matriculado: ${persona.cursoMatriculado}`;
+                atributosEspecificos += `<strong> Curso matriculado:</strong> ${persona.cursoMatriculado}`;
             } else if (persona instanceof Profesor) {
-                atributosEspecificos += `Año de incorporación: ${persona.annoIncorporacion}, -  Despacho: ${persona.numeroDespacho} - Departamento: ${persona.departamento}`;
+                atributosEspecificos += ` <strong> Año de incorporación: </strong>${persona.annoIncorporacion}, -  <strong> Despacho:</strong> ${persona.numeroDespacho} - <strong> Departamento:</strong> ${persona.departamento}`;
             } else if (persona instanceof PersonalDeServicio) {
-                atributosEspecificos += `Año de incorporación: ${persona.annoIncorporacion}, - Despacho: ${persona.numeroDespacho} - Sección asignada: ${persona.seccionAsignada}`;
+                atributosEspecificos += `<strong> Año de incorporación: </strong> ${persona.annoIncorporacion}, -<strong> Despacho: </strong>${persona.numeroDespacho} -<strong> Sección asignada:</strong> ${persona.seccionAsignada}`;
             }
 
 
             // Agregar cada persona como un elemento de lista
-            infoHTML += `<li>${persona.nombre} ${persona.apellidos} (${persona.estadoCivil}) - ${persona.cargo} - ID: ${persona.id} - ${atributosEspecificos}</li>`;
+            infoHTML += `<li>${persona.nombre} ${persona.apellidos} <strong> (${persona.cargo}) </strong> - ${persona.estadoCivil} - ID: ${persona.id} - ${atributosEspecificos}</li>`;
 
         });
 
@@ -59,6 +59,11 @@ export class CentroEducativo {
 
         this.infoDiv.innerHTML = infoHTML;
     }
+
+
+
 }
+
+
 
 

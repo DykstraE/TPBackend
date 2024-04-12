@@ -6,7 +6,9 @@ export class Profesor extends Empleado {
         this.departamento = departamento;
     }
 
-    cambiarDepartamento(nuevoDepartamento) {
-        this.departamento = nuevoDepartamento;
+    cambiarDepartamento(idPersona, nuevoDepartamento) {
+        if (this.id === idPersona) {
+            this.departamento = nuevoDepartamento;
+        }
     }
 }

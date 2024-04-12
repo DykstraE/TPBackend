@@ -7,7 +7,9 @@ export class Empleado extends Persona {
         this.numeroDespacho = numeroDespacho;
     }
 
-    cambiarDespacho(nuevoDespacho) {
-        this.numeroDespacho = nuevoDespacho;
+    cambiarDespacho(idPersona, nuevoDespacho) {
+        if (this.id === idPersona) {
+            this.numeroDespacho = nuevoDespacho;
+        }
     }
 }

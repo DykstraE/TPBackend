@@ -5,11 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tp.css">
 </head>
 
 <body>
     <h1>Información</h1>
 
+    
+    <br>
+    <label for="searchInput">Buscar por nombre:</label>
+    <input type="text" id="searchInput" placeholder="Buscar...">
+
+
+
+
+
+
+    <br>
+    <br>
+
+    <div id="info">
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>Administración</h2>
     <form id="altaForm">
         <h2>Dar de alta a una persona:</h2>
         <label for="nombre">Nombre:</label>
@@ -33,16 +56,24 @@
         </select><br>
         <button type="submit">Dar de alta</button>
     </form>
-    <br>
-    <label for="searchInput">Buscar por nombre:</label>
-    <input type="text" id="searchInput" placeholder="Buscar...">
+    <label for="atributo">Seleccionar atributo a cambiar:</label>
+    <select id="atributo">
+        <option value="despacho">Despacho</option>
+        <option value="estadoCivil">Estado Civil</option>
+        <option value="cursoMatriculado">Curso Matriculado</option>
+        <option value="departamento">Departamento</option>
+    </select><br>
 
+    <label for="idUsuario">ID del usuario:</label>
+    <input type="number" id="idUsuario"><br>
 
-    <br>
-    <br>
+    <label for="nuevoValor">Nuevo valor:</label>
+    <input type="text" id="nuevoValor"><br>
 
-    <div id="info">
-    </div>
+    <button id="enviarBtn">Enviar</button>
+
+    <button id="eliminarBtn">Dar de baja</button>
+
 
     <script type="module" src="persona.js"></script>
     <script type="module" src="empleado.js"></script>
