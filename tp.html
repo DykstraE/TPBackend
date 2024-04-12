@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Información</h1>
+
+    <form id="altaForm">
+        <h2>Dar de alta a una persona:</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" required><br>
+
+        <label for="estadoCivilValue">Estado Civil:</label>
+        <select id="estadoCivilValue">
+            <option value="Casado">Casado</option>
+            <option value="Soltero">Soltero</option>
+            <option value="Viudo">Viudo</option>
+            <option value="Divorciado">Divorciado</option>
+        </select><br>
+        <label for="classPersona">Cargo</label>
+        <select id="classPersona">
+            <option value="Estudiante">Estudiante</option>
+            <option value="Profesor">Profesor</option>
+            <option value="PersonalDeServicio">Personal De Servicio</option>
+
+        </select><br>
+        <button type="submit">Dar de alta</button>
+    </form>
+    <br>
+    <label for="searchInput">Buscar por nombre:</label>
+    <input type="text" id="searchInput" placeholder="Buscar...">
+
+
+    <br>
+    <br>
+
+    <div id="info">
+    </div>
+
+    <script type="module" src="persona.js"></script>
+    <script type="module" src="empleado.js"></script>
+    <script type="module" src="estudiante.js"></script>
+    <script type="module" src="profesor.js"></script>
+    <script type="module" src="personalServicio.js"></script>
+    <script type="module" src="tp.js"></script>
+</body>
+
+</html>
